@@ -5,5 +5,7 @@
 
   "block.rice_delight.pepper_crate": "Bell Pepper Crate",
 
-  "creativetab.rice_delight.rice_delight": "Rice Delight"
+  "creativetab.rice_delight.rice_delight": "Rice Delight",
+
+  "death.attack.coughing": "%1$s coughed his soul out"
 }

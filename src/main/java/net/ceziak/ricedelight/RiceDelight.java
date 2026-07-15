@@ -18,6 +18,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.ceziak.ricedelight.effect.ModEffects;
 
 
 @Mod(RiceDelight.MOD_ID)
@@ -37,6 +38,8 @@ public class RiceDelight {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
