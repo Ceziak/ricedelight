@@ -7,5 +7,6 @@
 
   "creativetab.rice_delight.rice_delight": "Rice Delight",
 
-  "effect.rice_delight.coughing": "%1$s coughed his soul out"
+  "death.attack.coughing": "%1$s coughed his soul out",
+  "effect.rice_delight.coughing": "Coughing"
 }

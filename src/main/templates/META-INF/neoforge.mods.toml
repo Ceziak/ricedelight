@@ -67,3 +67,5 @@ reason="Rice Delight is an add-on for Farmer's Delight and uses its recipes and 
 versionRange="[1.3.2,2)"
 ordering="AFTER"
 side="BOTH"
+
+enumExtensions="META-INF/enumextensions.json"
