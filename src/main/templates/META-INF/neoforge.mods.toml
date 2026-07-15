@@ -1,5 +1,3 @@
-# Rice Delight mod metadata
-
 modLoader="javafml"
 loaderVersion="${loader_version_range}"
 license="${mod_license}"
@@ -15,7 +13,6 @@ displayName="${mod_name}"
 displayURL="https://github.com/Ceziak/ricedelight"
 authors="Ceziak"
 
-# Required for the custom Coughing heart type
 enumExtensions="META-INF/enumextensions.json"
 
 description='''
@@ -26,8 +23,6 @@ around rice, bell peppers and other foods.
 '''
 
 
-# NeoForge
-
 [[dependencies.${mod_id}]]
 modId="neoforge"
 type="required"
@@ -36,8 +31,6 @@ versionRange="[${neo_version},)"
 ordering="NONE"
 side="BOTH"
 
-
-# Minecraft
 
 [[dependencies.${mod_id}]]
 modId="minecraft"
@@ -48,12 +41,10 @@ ordering="NONE"
 side="BOTH"
 
 
-# Farmer's Delight
-
 [[dependencies.${mod_id}]]
 modId="farmersdelight"
 type="required"
-reason="Rice Delight is a Farmer's Delight add-on and uses its recipes and systems."
+reason="Rice Delight is a Farmer's Delight add-on."
 versionRange="[1.3.2,2)"
 ordering="AFTER"
 side="BOTH"
