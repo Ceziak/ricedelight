@@ -11,10 +11,11 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(RiceDelight.MOD_ID);
 
     // Foods
-    public static final DeferredItem<Item> PEPPER = ITEMS.register("bell_pepper",
-            () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> PEPPER_CHUNK = ITEMS.register("pepper_chunk",
-            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PEPPER =
+            ITEMS.register("bell_pepper", () -> new Item(new Item.Properties().food(ModFoodProperties.PEPPER)));
+
+    public static final DeferredItem<Item> PEPPER_CHUNK =
+            ITEMS.register("pepper_chunk", () -> new Item(new Item.Properties().food(ModFoodProperties.PEPPER_CHUNK)));
 
     // Tools
     public static final DeferredItem<Item> PIN = ITEMS.register("pin",
