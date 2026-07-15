@@ -10,10 +10,17 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(RiceDelight.MOD_ID);
 
+    // Foods
     public static final DeferredItem<Item> PEPPER = ITEMS.register("bell_pepper",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> PEPPER_CHUNK = ITEMS.register("pepper_chunk",
             () -> new Item(new Item.Properties()));
+
+    // Tools
+    public static final DeferredItem<Item> PIN = ITEMS.register("pin",
+            () -> new Item(new Item.Properties()));
+
+    // Meals
 
 
     public static void register(IEventBus eventBus) {
