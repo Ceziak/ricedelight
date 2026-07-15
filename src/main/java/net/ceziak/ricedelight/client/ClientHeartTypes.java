@@ -9,12 +9,10 @@ public final class ClientHeartTypes {
     public static final EnumProxy<Gui.HeartType> COUGHING =
             new EnumProxy<>(
                     Gui.HeartType.class,
-
                     heartSprite("full"),
                     heartSprite("full_blinking"),
                     heartSprite("half"),
                     heartSprite("half_blinking"),
-
                     heartSprite("hardcore_full"),
                     heartSprite("hardcore_full_blinking"),
                     heartSprite("hardcore_half"),

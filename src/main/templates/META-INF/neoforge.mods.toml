@@ -4,48 +4,40 @@ modLoader="javafml"
 loaderVersion="${loader_version_range}"
 license="${mod_license}"
 
-# Where users can report problems
 issueTrackerURL="https://github.com/Ceziak/ricedelight/issues"
 
-
-# --------------------------------------------------
-# Rice Delight
-# --------------------------------------------------
 
 [[mods]]
 modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
 
-# Page displayed in the Mods menu
 displayURL="https://github.com/Ceziak/ricedelight"
-
 authors="Ceziak"
 
-description='''
-A Farmer's Delight add-on expanding upon the possibilities of rice.
+# Required for the custom Coughing heart type
+enumExtensions="META-INF/enumextensions.json"
 
-Rice Delight adds new ingredients, blocks, recipes and meals based around
-rice.
+description='''
+A Farmer's Delight add-on expanding the possibilities of rice.
+
+Rice Delight adds new ingredients, blocks, recipes, crops and meals based
+around rice, bell peppers and other foods.
 '''
 
 
-# --------------------------------------------------
-# NeoForge dependency
-# --------------------------------------------------
+# NeoForge
 
 [[dependencies.${mod_id}]]
 modId="neoforge"
 type="required"
-reason="Rice Delight is built for NeoForge."
+reason="Rice Delight requires NeoForge."
 versionRange="[${neo_version},)"
 ordering="NONE"
 side="BOTH"
 
 
-# --------------------------------------------------
-# Minecraft dependency
-# --------------------------------------------------
+# Minecraft
 
 [[dependencies.${mod_id}]]
 modId="minecraft"
@@ -56,16 +48,12 @@ ordering="NONE"
 side="BOTH"
 
 
-# --------------------------------------------------
-# Farmer's Delight dependency
-# --------------------------------------------------
+# Farmer's Delight
 
 [[dependencies.${mod_id}]]
 modId="farmersdelight"
 type="required"
-reason="Rice Delight is an add-on for Farmer's Delight and uses its recipes and systems."
+reason="Rice Delight is a Farmer's Delight add-on and uses its recipes and systems."
 versionRange="[1.3.2,2)"
 ordering="AFTER"
 side="BOTH"
-
-enumExtensions="META-INF/enumextensions.json"
