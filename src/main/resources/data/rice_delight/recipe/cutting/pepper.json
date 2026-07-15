@@ -2,7 +2,7 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "rice_delight:pepper"
+      "item": "rice_delight:bell_pepper"
     }
   ],
   "result": [
@@ -14,6 +14,10 @@
     }
   ],
   "tool": [
+    {
+      "type": "farmersdelight:item_ability",
+      "action": "knife_dig"
+    },
     {
       "tag": "c:tools/knife"
     }
