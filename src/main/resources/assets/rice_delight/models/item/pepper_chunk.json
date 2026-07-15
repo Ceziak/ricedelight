@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+        "textures": {
+          "layer0": "rice_delight:item/pepper_chunk"
+
+        }
+}

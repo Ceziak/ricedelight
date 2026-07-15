@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "rice_delight:pepper"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 5,
+        "id": "rice_delight:pepper_chunk"
+      }
+    }
+  ],
+  "tool": [
+    {
+      "tag": "c:tools/knife"
+    }
+  ]
+}
