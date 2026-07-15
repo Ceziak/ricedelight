@@ -52,13 +52,7 @@ public class RiceDelight {
 
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
-            event.accept(ModItems.PEPPER);
-            event.accept(ModItems.PEPPER_CHUNK);
-        }
-        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
-            event.accept(ModBlocks.PEPPER_CRATE);
-        }
+
     }
 
     @SubscribeEvent
