@@ -72,8 +72,4 @@ public final class ModLootTables extends LootTableProvider {
         }
     }
 
-    private ModLootTables() {
-        this(null, null);
-        throw new UnsupportedOperationException();
-    }
 }
