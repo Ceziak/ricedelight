@@ -19,6 +19,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.ceziak.ricedelight.effect.ModEffects;
+import net.ceziak.ricedelight.datagen.ModLootTables;
 
 
 @Mod(RiceDelight.MOD_ID)
@@ -31,6 +32,7 @@ public class RiceDelight {
     public RiceDelight(IEventBus modEventBus, ModContainer modContainer) {
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(ModLootTables::gatherData);
 
         NeoForge.EVENT_BUS.register(this);
 

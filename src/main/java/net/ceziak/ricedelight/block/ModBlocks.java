@@ -20,25 +20,24 @@ public class ModBlocks {
     // Crates
     public static final DeferredBlock<Block> PEPPER_CRATE =
             registerBlock("pepper_crate",
-                    properties -> new Block(properties.sound(SoundType.WOOD).strength(2.0f, 3.0f)));
+                    properties -> new Block(properties.sound(SoundType.WOOD).strength(2.0F, 3.0F)));
 
     public static final DeferredBlock<Block> BASIL_CRATE =
             registerBlock("basil_crate",
-                    properties -> new Block(properties.sound(SoundType.WOOD).strength(2.0f, 3.0f)));
+                    properties -> new Block(properties.sound(SoundType.WOOD).strength(2.0F, 3.0F)));
 
 
 
 
-    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> block) {
-        DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, block);
-        registerBlockItem(name, toReturn);
-        return toReturn;
+    private static <T extends Block> DeferredBlock<T> registerBlock(
+            String name,
+            Function<BlockBehaviour.Properties, T> blockFactory) {DeferredBlock<T> block =
+            BLOCKS.registerBlock(name, blockFactory);registerBlockItem(name, block);return block;
     }
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.register(
-                name, () -> new BlockItem(block.get(), new Item.Properties())
-        );
+        ModItems.ITEMS.register(name,
+                () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {

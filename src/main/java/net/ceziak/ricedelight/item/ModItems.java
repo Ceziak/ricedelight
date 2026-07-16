@@ -23,10 +23,16 @@ public class ModItems {
             ITEMS.register("basil",
                     () -> new Item(new Item.Properties().food(ModFoodProperties.BASIL)));
 
+    public static final DeferredItem<Item> CINNAMON =
+            ITEMS.register("cinnamon",
+                    () -> new Item(new Item.Properties().food(ModFoodProperties.CINNAMON)));
+
+
     // Tools
     public static final DeferredItem<Item> PIN =
             ITEMS.register("pin",
                     () -> new Item(new Item.Properties()));
+
 
     // Meals
 

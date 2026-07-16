@@ -1,0 +1,18 @@
+{
+  "type": "farmersdelight:cooking",
+  "recipe_book_tab": "meals",
+  "ingredients": [
+    { "tag": "forge:crops/rice" },
+    { "item": "rice_delight:cinnamon" },
+    { "item": "minecraft:sugar" },
+    { "item": "minecraft:milk_bucket" }
+  ],
+  "result": {
+    "item": "rice_delight:glass_of_horchata"
+  },
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "experience": 2.0,
+  "cookingtime": 200
+}
