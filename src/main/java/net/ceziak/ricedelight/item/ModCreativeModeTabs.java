@@ -20,6 +20,10 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.PEPPER);
                 output.accept(ModItems.PEPPER_CHUNK);
                 output.accept(ModBlocks.PEPPER_CRATE);
+
+                output.accept(ModItems.BASIL);
+                output.accept(ModBlocks.BASIL_CRATE);
+
                 output.accept(ModItems.PIN);
             })
 

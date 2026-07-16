@@ -17,8 +17,13 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(RiceDelight.MOD_ID);
 
+    // Crates
     public static final DeferredBlock<Block> PEPPER_CRATE =
             registerBlock("pepper_crate",
+                    properties -> new Block(properties.sound(SoundType.WOOD).strength(2.0f, 3.0f)));
+
+    public static final DeferredBlock<Block> BASIL_CRATE =
+            registerBlock("basil_crate",
                     properties -> new Block(properties.sound(SoundType.WOOD).strength(2.0f, 3.0f)));
 
 
