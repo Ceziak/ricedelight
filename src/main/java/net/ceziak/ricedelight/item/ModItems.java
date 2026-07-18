@@ -87,6 +87,14 @@ public class ModItems {
             ITEMS.register("horchata",
                     () -> new DrinkItem(new Item.Properties().food(ModFoodProperties.HORCHATA).stacksTo(16)));
 
+    // Seeds
+    public static final DeferredItem<Item> BASIL_SEEDS =
+            ITEMS.register("basil_seeds",
+                    () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PEPPER_SEEDS =
+            ITEMS.register("bell_pepper_seeds",
+                    () -> new Item(new Item.Properties()));
+
 
 
     public static void register(IEventBus eventBus) {
