@@ -8,7 +8,7 @@
     { "item": "minecraft:milk_bucket" }
   ],
   "result": {
-    "item": "rice_delight:glass_of_horchata"
+    "item": "rice_delight:horchata"
   },
   "container": {
     "item": "minecraft:glass_bottle"
