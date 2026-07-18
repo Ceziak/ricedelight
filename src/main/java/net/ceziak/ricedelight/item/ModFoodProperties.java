@@ -3,6 +3,7 @@ package net.ceziak.ricedelight.item;
 import net.ceziak.ricedelight.effect.ModEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Items;
 
 public final class ModFoodProperties {
 
@@ -23,6 +24,11 @@ public final class ModFoodProperties {
                     .saturationModifier(0.5F)
                     .fast()
                     .build();
+    public static final FoodProperties WRAP =
+            new FoodProperties.Builder()
+                    .nutrition(3)
+                    .saturationModifier(0.25F)
+                    .build();
 
     // COUGHING
     public static final FoodProperties COUGHING =
@@ -38,33 +44,43 @@ public final class ModFoodProperties {
 
     public static final FoodProperties SLICED_BT_BURRITO =
             new FoodProperties.Builder()
-                    .nutrition(16)
+                    .nutrition(8)
                     .saturationModifier(0.25F)
                     .build();
     public static final FoodProperties SLICED_CBC_BURRITO =
             new FoodProperties.Builder()
-                    .nutrition(11)
+                    .nutrition(6)
                     .saturationModifier(0.25F)
                     .build();
     public static final FoodProperties SLICED_FV_BURRITO =
             new FoodProperties.Builder()
-                    .nutrition(14)
+                    .nutrition(7)
                     .saturationModifier(0.25F)
                     .build();
     public static final FoodProperties SLICED_BE_BURRITO =
             new FoodProperties.Builder()
-                    .nutrition(20)
+                    .nutrition(10)
                     .saturationModifier(0.25F)
                     .build();
     public static final FoodProperties SLICED_V_BURRITO =
             new FoodProperties.Builder()
-                    .nutrition(13)
+                    .nutrition(7)
                     .saturationModifier(0.25F)
                     .build();
     public static final FoodProperties SLICED_BC_BURRITO =
             new FoodProperties.Builder()
-                    .nutrition(16)
+                    .nutrition(8)
                     .saturationModifier(0.25F)
+                    .build();
+
+    // DRINKS
+
+    public static final FoodProperties HORCHATA =
+            new FoodProperties.Builder()
+                    .nutrition(5)
+                    .saturationModifier(0.5F)
+                    .alwaysEdible()
+                    .usingConvertsTo(Items.GLASS_BOTTLE)
                     .build();
 
     private ModFoodProperties() {

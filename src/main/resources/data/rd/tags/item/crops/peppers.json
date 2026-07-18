@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "rice_delight:bell_pepper",
+    { "id": "rusticdelight:bell_pepper_red", "required": false },
+    { "id": "rusticdelight:bell_pepper_yellow", "required": false },
+    { "id": "rusticdelight:bell_pepper_green", "required": false }
+  ]
+}

@@ -23,6 +23,9 @@ public class ModItems {
     public static final DeferredItem<Item> CINNAMON =
             ITEMS.register("cinnamon",
                     () -> new Item(new Item.Properties().food(ModFoodProperties.COUGHING)));
+    public static final DeferredItem<Item> WRAP =
+            ITEMS.register("raw_wrap",
+                    () -> new Item(new Item.Properties().food(ModFoodProperties.WRAP)));
 
     // Burritos
     public static final DeferredItem<Item> BT_BURRITO =
@@ -80,9 +83,11 @@ public class ModItems {
     // Meals
 
     // Drinks
-    public static final DeferredItem<Item> HORCHATA =
-            ITEMS.register("glass_of_horchata",
-                    () -> new Item(new Item.Properties().food(ModFoodProperties.HORCHATA)));
+    public static final DeferredItem<DrinkItem> HORCHATA =
+            ITEMS.register("horchata",
+                    () -> new DrinkItem(new Item.Properties().food(ModFoodProperties.HORCHATA).stacksTo(16)));
+
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
