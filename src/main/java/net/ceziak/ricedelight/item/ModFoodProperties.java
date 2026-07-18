@@ -11,14 +11,12 @@ public final class ModFoodProperties {
                     .nutrition(3)
                     .saturationModifier(0.25F)
                     .build();
-
     public static final FoodProperties PEPPER_CHUNK =
             new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationModifier(0.5F)
                     .fast()
                     .build();
-
     public static final FoodProperties BASIL =
             new FoodProperties.Builder()
                     .nutrition(1)
@@ -26,13 +24,47 @@ public final class ModFoodProperties {
                     .fast()
                     .build();
 
-    public static final FoodProperties CINNAMON =
+    // COUGHING
+    public static final FoodProperties COUGHING =
             new FoodProperties.Builder()
                     .nutrition(1)
                     .saturationModifier(0.5F)
                     .fast()
                     .effect(() -> new MobEffectInstance(ModEffects.COUGHING, 20 * 5, 0), 1.0F)
                     .alwaysEdible()
+                    .build();
+
+    // BURRITOS
+
+    public static final FoodProperties SLICED_BT_BURRITO =
+            new FoodProperties.Builder()
+                    .nutrition(16)
+                    .saturationModifier(0.25F)
+                    .build();
+    public static final FoodProperties SLICED_CBC_BURRITO =
+            new FoodProperties.Builder()
+                    .nutrition(11)
+                    .saturationModifier(0.25F)
+                    .build();
+    public static final FoodProperties SLICED_FV_BURRITO =
+            new FoodProperties.Builder()
+                    .nutrition(14)
+                    .saturationModifier(0.25F)
+                    .build();
+    public static final FoodProperties SLICED_BE_BURRITO =
+            new FoodProperties.Builder()
+                    .nutrition(20)
+                    .saturationModifier(0.25F)
+                    .build();
+    public static final FoodProperties SLICED_V_BURRITO =
+            new FoodProperties.Builder()
+                    .nutrition(13)
+                    .saturationModifier(0.25F)
+                    .build();
+    public static final FoodProperties SLICED_BC_BURRITO =
+            new FoodProperties.Builder()
+                    .nutrition(16)
+                    .saturationModifier(0.25F)
                     .build();
 
     private ModFoodProperties() {
