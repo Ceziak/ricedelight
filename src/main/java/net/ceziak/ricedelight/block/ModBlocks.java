@@ -1,6 +1,8 @@
 package net.ceziak.ricedelight.block;
 
 import net.ceziak.ricedelight.RiceDelight;
+import net.ceziak.ricedelight.block.custom.BasilCropBlock;
+import net.ceziak.ricedelight.block.custom.PepperCropBlock;
 import net.ceziak.ricedelight.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -13,34 +15,81 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Function;
 
-public class ModBlocks {
+public final class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(RiceDelight.MOD_ID);
 
+    // Crops - no normal BlockItem is registered for these.
+    public static final DeferredBlock<BasilCropBlock> BASIL_CROP =
+            BLOCKS.registerBlock(
+                    "basil_crop",
+                    properties -> new BasilCropBlock(
+                            properties
+                                    .noCollission()
+                                    .randomTicks()
+                                    .instabreak()
+                                    .sound(SoundType.CROP)
+                                    .noOcclusion()
+                    )
+            );
+
+    public static final DeferredBlock<PepperCropBlock> PEPPER_CROP =
+            BLOCKS.registerBlock(
+                    "bell_pepper_crop",
+                    properties -> new PepperCropBlock(
+                            properties
+                                    .noCollission()
+                                    .randomTicks()
+                                    .instabreak()
+                                    .sound(SoundType.CROP)
+                                    .noOcclusion()
+                    )
+            );
+
     // Crates
     public static final DeferredBlock<Block> PEPPER_CRATE =
-            registerBlock("pepper_crate",
-                    properties -> new Block(properties.sound(SoundType.WOOD).strength(2.0F, 3.0F)));
+            registerBlock(
+                    "pepper_crate",
+                    properties -> new Block(
+                            properties
+                                    .sound(SoundType.WOOD)
+                                    .strength(2.0F, 3.0F)
+                    )
+            );
 
     public static final DeferredBlock<Block> BASIL_CRATE =
-            registerBlock("basil_crate",
-                    properties -> new Block(properties.sound(SoundType.WOOD).strength(2.0F, 3.0F)));
-
-
-
+            registerBlock(
+                    "basil_crate",
+                    properties -> new Block(
+                            properties
+                                    .sound(SoundType.WOOD)
+                                    .strength(2.0F, 3.0F)
+                    )
+            );
 
     private static <T extends Block> DeferredBlock<T> registerBlock(
             String name,
-            Function<BlockBehaviour.Properties, T> blockFactory) {DeferredBlock<T> block =
-            BLOCKS.registerBlock(name, blockFactory);registerBlockItem(name, block);return block;
+            Function<BlockBehaviour.Properties, T> blockFactory
+    ) {
+        DeferredBlock<T> block = BLOCKS.registerBlock(name, blockFactory);
+        registerBlockItem(name, block);
+        return block;
     }
 
-    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.register(name,
-                () -> new BlockItem(block.get(), new Item.Properties()));
+    private static <T extends Block> void registerBlockItem(
+            String name,
+            DeferredBlock<T> block
+    ) {
+        ModItems.ITEMS.register(
+                name,
+                () -> new BlockItem(block.get(), new Item.Properties())
+        );
     }
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
+    }
+
+    private ModBlocks() {
     }
 }
