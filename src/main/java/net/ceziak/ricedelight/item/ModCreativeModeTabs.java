@@ -21,7 +21,7 @@ public final class ModCreativeModeTabs {
             CREATIVE_MODE_TABS.register(
                     "rice_delight",
                     () -> CreativeModeTab.builder()
-                            .icon(() -> new ItemStack(ModItems.PEPPER.get()))
+                            .icon(() -> new ItemStack(ModItems.PIN.get()))
                             .title(Component.translatable(
                                     "creativetab.rice_delight.rice_delight"
                             ))
@@ -39,6 +39,7 @@ public final class ModCreativeModeTabs {
                                 // Ingredients
                                 output.accept(ModItems.CINNAMON.get());
                                 output.accept(ModItems.WRAP.get());
+                                output.accept(ModItems.COOKED_WRAP.get());
 
                                 // Whole burritos
                                 output.accept(ModItems.BT_BURRITO.get());

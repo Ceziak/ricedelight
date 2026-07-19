@@ -1,16 +1,73 @@
 {
+  "creativetab.rice_delight.rice_delight": "Rice Delight",
+
   "item.rice_delight.bell_pepper": "Bell Pepper",
   "item.rice_delight.bell_pepper_seeds": "Bell Pepper Seeds",
   "item.rice_delight.pepper_chunk": "Bell Pepper Chunk",
+
   "item.rice_delight.basil": "Basil Leaf",
   "item.rice_delight.basil_seeds": "Basil Seeds",
+
+  "item.rice_delight.cinnamon": "Cinnamon",
+  "item.rice_delight.raw_wrap": "Tortilla Wrap",
+  "item.rice_delight.cooked_wrap": "Cooked Tortilla Wrap",
+
+  "item.rice_delight.bt_burrito": "Burrito",
+  "item.rice_delight.cbc_burrito": "Burrito",
+  "item.rice_delight.fv_burrito": "Burrito",
+  "item.rice_delight.be_burrito": "Burrito",
+  "item.rice_delight.v_burrito": "Burrito",
+  "item.rice_delight.bc_burrito": "Burrito",
+
+  "item.rice_delight.sliced_bt_burrito": "Burrito Half",
+  "item.rice_delight.sliced_cbc_burrito": "Burrito Half",
+  "item.rice_delight.sliced_fv_burrito": "Burrito Half",
+  "item.rice_delight.sliced_be_burrito": "Burrito Half",
+  "item.rice_delight.sliced_v_burrito": "Burrito Half",
+  "item.rice_delight.sliced_bc_burrito": "Burrito Half",
+
+  "item.rice_delight.burnt_burrito": "Burnt Burrito",
+  "item.rice_delight.burnt_wrap": "Burnt Tortilla Wrap",
+
   "item.rice_delight.horchata": "Horchata",
   "item.rice_delight.pin": "Rolling Pin",
+
   "block.rice_delight.pepper_crate": "Bell Pepper Crate",
   "block.rice_delight.basil_crate": "Basil Crate",
   "block.rice_delight.bell_pepper_crop": "Bell Pepper Crop",
   "block.rice_delight.basil_crop": "Basil Crop",
-  "creativetab.rice_delight.rice_delight": "Rice Delight",
-  "death.attack.coughing": "%1$s coughed his soul out",
-  "effect.rice_delight.coughing": "Coughing"
+
+  "effect.rice_delight.coughing": "Coughing",
+  "death.attack.coughing": "%1$s coughed their soul out",
+
+  "lore.rice_delight.bt_burrito.0": "Contents:",
+  "lore.rice_delight.bt_burrito.1": "• Rice",
+  "lore.rice_delight.bt_burrito.2": "• Beef",
+  "lore.rice_delight.bt_burrito.3": "• Tomato",
+
+  "lore.rice_delight.cbc_burrito.0": "Contents:",
+  "lore.rice_delight.cbc_burrito.1": "• Rice",
+  "lore.rice_delight.cbc_burrito.2": "• Chicken",
+  "lore.rice_delight.cbc_burrito.3": "• Beetroot",
+  "lore.rice_delight.cbc_burrito.4": "• Cabbage",
+
+  "lore.rice_delight.fv_burrito.0": "Contents:",
+  "lore.rice_delight.fv_burrito.1": "• Fried Rice",
+  "lore.rice_delight.fv_burrito.2": "• Tomato",
+  "lore.rice_delight.fv_burrito.3": "• Cabbage",
+
+  "lore.rice_delight.be_burrito.0": "Contents:",
+  "lore.rice_delight.be_burrito.1": "• Rice",
+  "lore.rice_delight.be_burrito.2": "• Bacon",
+  "lore.rice_delight.be_burrito.3": "• Eggs",
+
+  "lore.rice_delight.v_burrito.0": "Contents:",
+  "lore.rice_delight.v_burrito.1": "• Rice",
+  "lore.rice_delight.v_burrito.2": "• Tomato",
+  "lore.rice_delight.v_burrito.3": "• Cabbage",
+
+  "lore.rice_delight.bc_burrito.0": "Contents:",
+  "lore.rice_delight.bc_burrito.1": "• Rice",
+  "lore.rice_delight.bc_burrito.2": "• Beef",
+  "lore.rice_delight.bc_burrito.3": "• Cabbage"
 }

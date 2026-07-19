@@ -29,6 +29,11 @@ public final class ModFoodProperties {
                     .nutrition(3)
                     .saturationModifier(0.25F)
                     .build();
+    public static final FoodProperties COOKED_WRAP =
+            new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationModifier(0.25F)
+                    .build();
 
     // COUGHING
     public static final FoodProperties COUGHING =

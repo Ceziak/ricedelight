@@ -43,6 +43,12 @@ public final class ModItems {
                     () -> new Item(new Item.Properties().food(ModFoodProperties.WRAP))
             );
 
+    public static final DeferredItem<Item> COOKED_WRAP =
+            ITEMS.register(
+                    "cooked_wrap",
+                    () -> new Item(new Item.Properties().food(ModFoodProperties.COOKED_WRAP))
+            );
+
     // Plantable seeds
     public static final DeferredItem<ItemNameBlockItem> BASIL_SEEDS =
             ITEMS.register(
@@ -64,17 +70,47 @@ public final class ModItems {
 
     // Whole burritos
     public static final DeferredItem<Item> BT_BURRITO =
-            ITEMS.register("bt_burrito", () -> new Item(new Item.Properties()));
+            ITEMS.register("bt_burrito",
+                    () -> new Item(ModItemLore.add(new Item.Properties(),
+                            "lore.rice_delight.bt_burrito.0",
+                            "lore.rice_delight.bt_burrito.1",
+                            "lore.rice_delight.bt_burrito.2",
+                            "lore.rice_delight.bt_burrito.3")));
     public static final DeferredItem<Item> CBC_BURRITO =
-            ITEMS.register("cbc_burrito", () -> new Item(new Item.Properties()));
+            ITEMS.register("cbc_burrito",
+                    () -> new Item(ModItemLore.add(new Item.Properties(),
+                            "lore.rice_delight.cbc_burrito.0",
+                            "lore.rice_delight.cbc_burrito.1",
+                            "lore.rice_delight.cbc_burrito.2",
+                            "lore.rice_delight.cbc_burrito.3")));
     public static final DeferredItem<Item> FV_BURRITO =
-            ITEMS.register("fv_burrito", () -> new Item(new Item.Properties()));
+            ITEMS.register("fv_burrito",
+                    () -> new Item(ModItemLore.add(new Item.Properties(),
+                            "lore.rice_delight.fv_burrito.0",
+                            "lore.rice_delight.fv_burrito.1",
+                            "lore.rice_delight.fv_burrito.2",
+                            "lore.rice_delight.fv_burrito.3")));
     public static final DeferredItem<Item> BE_BURRITO =
-            ITEMS.register("be_burrito", () -> new Item(new Item.Properties()));
+            ITEMS.register("be_burrito",
+                    () -> new Item(ModItemLore.add(new Item.Properties(),
+                            "lore.rice_delight.be_burrito.0",
+                            "lore.rice_delight.be_burrito.1",
+                            "lore.rice_delight.be_burrito.2",
+                            "lore.rice_delight.be_burrito.3")));
     public static final DeferredItem<Item> V_BURRITO =
-            ITEMS.register("v_burrito", () -> new Item(new Item.Properties()));
+            ITEMS.register("v_burrito",
+                    () -> new Item(ModItemLore.add(new Item.Properties(),
+                            "lore.rice_delight.v_burrito.0",
+                            "lore.rice_delight.v_burrito.1",
+                            "lore.rice_delight.v_burrito.2",
+                            "lore.rice_delight.v_burrito.3")));
     public static final DeferredItem<Item> BC_BURRITO =
-            ITEMS.register("bc_burrito", () -> new Item(new Item.Properties()));
+            ITEMS.register("bc_burrito",
+                    () -> new Item(ModItemLore.add(new Item.Properties(),
+                            "lore.rice_delight.bc_burrito.0",
+                            "lore.rice_delight.bc_burrito.1",
+                            "lore.rice_delight.bc_burrito.2",
+                            "lore.rice_delight.bc_burrito.3")));
 
     // Sliced burritos
     public static final DeferredItem<Item> SLICED_BT_BURRITO =
