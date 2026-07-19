@@ -20,6 +20,7 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public final class ModLootTables extends LootTableProvider {
+
     private ModLootTables(
             PackOutput output,
             CompletableFuture<HolderLookup.Provider> lookupProvider
@@ -50,6 +51,7 @@ public final class ModLootTables extends LootTableProvider {
     }
 
     private static final class BlockTables extends BlockLootSubProvider {
+
         private BlockTables(HolderLookup.Provider lookupProvider) {
             super(
                     Set.of(),
@@ -60,11 +62,11 @@ public final class ModLootTables extends LootTableProvider {
 
         @Override
         protected void generate() {
+            // Crates
             dropSelf(ModBlocks.PEPPER_CRATE.get());
             dropSelf(ModBlocks.BASIL_CRATE.get());
 
-            // Like Farmer's Delight wild crops, these primarily give
-            // the player a plantable sample to begin farming with.
+            // Wild plants give the matching seed so they can be cultivated.
             dropOther(
                     ModBlocks.WILD_BASIL.get(),
                     ModItems.BASIL_SEEDS.get()
@@ -75,6 +77,9 @@ public final class ModLootTables extends LootTableProvider {
                     ModItems.PEPPER_SEEDS.get()
             );
 
+            // Cultivated basil:
+            // immature plants drop seeds;
+            // fully grown plants drop basil and extra seeds.
             add(
                     ModBlocks.BASIL_CROP.get(),
                     createCropDrops(
@@ -93,6 +98,9 @@ public final class ModLootTables extends LootTableProvider {
                     )
             );
 
+            // Cultivated bell peppers:
+            // immature plants drop seeds;
+            // fully grown plants drop a pepper and extra seeds.
             add(
                     ModBlocks.PEPPER_CROP.get(),
                     createCropDrops(
@@ -121,4 +129,5 @@ public final class ModLootTables extends LootTableProvider {
                     .toList();
         }
     }
+
 }
