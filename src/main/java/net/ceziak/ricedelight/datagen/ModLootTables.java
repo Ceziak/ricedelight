@@ -63,6 +63,18 @@ public final class ModLootTables extends LootTableProvider {
             dropSelf(ModBlocks.PEPPER_CRATE.get());
             dropSelf(ModBlocks.BASIL_CRATE.get());
 
+            // Like Farmer's Delight wild crops, these primarily give
+            // the player a plantable sample to begin farming with.
+            dropOther(
+                    ModBlocks.WILD_BASIL.get(),
+                    ModItems.BASIL_SEEDS.get()
+            );
+
+            dropOther(
+                    ModBlocks.WILD_BELL_PEPPERS.get(),
+                    ModItems.PEPPER_SEEDS.get()
+            );
+
             add(
                     ModBlocks.BASIL_CROP.get(),
                     createCropDrops(

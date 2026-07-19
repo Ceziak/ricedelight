@@ -27,11 +27,13 @@ public final class ModCreativeModeTabs {
                             ))
                             .displayItems((parameters, output) -> {
                                 // Crops and harvested ingredients
+                                output.accept(ModBlocks.WILD_BELL_PEPPERS.get());
                                 output.accept(ModItems.PEPPER_SEEDS.get());
                                 output.accept(ModItems.PEPPER.get());
                                 output.accept(ModItems.PEPPER_CHUNK.get());
                                 output.accept(ModBlocks.PEPPER_CRATE.get());
 
+                                output.accept(ModBlocks.WILD_BASIL.get());
                                 output.accept(ModItems.BASIL_SEEDS.get());
                                 output.accept(ModItems.BASIL.get());
                                 output.accept(ModBlocks.BASIL_CRATE.get());

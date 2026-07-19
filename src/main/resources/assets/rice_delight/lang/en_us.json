@@ -91,5 +91,9 @@
   "item.rice_delight.rice_wafer": "Rice Wafer",
   "item.rice_delight.scallion": "Scallion",
   "item.rice_delight.sliced_burnt_burrito": "Burnt Burrito Slice",
-  "item.rice_delight.wooden_hammer": "Wooden Hammer"
+  "item.rice_delight.wooden_hammer": "Wooden Hammer",
+
+  "block.rice_delight.wild_basil": "Wild Basil",
+  "block.rice_delight.wild_bell_peppers": "Wild Bell Peppers"
+
 }

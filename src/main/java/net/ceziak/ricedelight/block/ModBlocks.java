@@ -3,6 +3,7 @@ package net.ceziak.ricedelight.block;
 import net.ceziak.ricedelight.RiceDelight;
 import net.ceziak.ricedelight.block.custom.BasilCropBlock;
 import net.ceziak.ricedelight.block.custom.PepperCropBlock;
+import net.ceziak.ricedelight.block.custom.WildCropBlock;
 import net.ceziak.ricedelight.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -19,7 +20,7 @@ public final class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(RiceDelight.MOD_ID);
 
-    // Crops - no normal BlockItem is registered for these.
+    // Growable crops - their seed items are registered in ModItems.
     public static final DeferredBlock<BasilCropBlock> BASIL_CROP =
             BLOCKS.registerBlock(
                     "basil_crop",
@@ -46,7 +47,32 @@ public final class ModBlocks {
                     )
             );
 
-    // Crates
+    // Wild crops - these receive normal BlockItems.
+    public static final DeferredBlock<WildCropBlock> WILD_BASIL =
+            registerBlock(
+                    "wild_basil",
+                    properties -> new WildCropBlock(
+                            properties
+                                    .noCollission()
+                                    .instabreak()
+                                    .sound(SoundType.GRASS)
+                                    .noOcclusion()
+                    )
+            );
+
+    public static final DeferredBlock<WildCropBlock> WILD_BELL_PEPPERS =
+            registerBlock(
+                    "wild_bell_peppers",
+                    properties -> new WildCropBlock(
+                            properties
+                                    .noCollission()
+                                    .instabreak()
+                                    .sound(SoundType.GRASS)
+                                    .noOcclusion()
+                    )
+            );
+
+    // Crates.
     public static final DeferredBlock<Block> PEPPER_CRATE =
             registerBlock(
                     "pepper_crate",
