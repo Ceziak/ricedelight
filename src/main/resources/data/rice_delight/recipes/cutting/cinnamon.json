@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "farmersdelight:tree_bark"
+    }
+  ],
+  "result": [
+    {
+      "item": "rice_delight:cinnamon",
+      "count": 3
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

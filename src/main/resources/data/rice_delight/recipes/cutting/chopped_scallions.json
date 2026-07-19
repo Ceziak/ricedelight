@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "rice_delight:scallion"
+    }
+  ],
+  "result": [
+    {
+      "item": "rice_delight:chopped_scallions",
+      "count": 3
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

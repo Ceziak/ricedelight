@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "rice_delight:rice_dough"
+  },
+  "result": {
+    "item": "rice_delight:rice_wafer"
+  }
+}

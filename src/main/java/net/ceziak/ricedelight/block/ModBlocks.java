@@ -4,28 +4,26 @@ import net.ceziak.ricedelight.RiceDelight;
 import net.ceziak.ricedelight.block.custom.BasilCropBlock;
 import net.ceziak.ricedelight.block.custom.PepperCropBlock;
 import net.ceziak.ricedelight.block.custom.WildCropBlock;
-import net.ceziak.ricedelight.item.ModItems;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredRegister;
-
-import java.util.function.Function;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public final class ModBlocks {
-    public static final DeferredRegister.Blocks BLOCKS =
-            DeferredRegister.createBlocks(RiceDelight.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS =
+            DeferredRegister.create(
+                    ForgeRegistries.BLOCKS,
+                    RiceDelight.MOD_ID
+            );
 
-    // Growable crops - their seed items are registered in ModItems.
-    public static final DeferredBlock<BasilCropBlock> BASIL_CROP =
-            BLOCKS.registerBlock(
+    public static final RegistryObject<BasilCropBlock> BASIL_CROP =
+            BLOCKS.register(
                     "basil_crop",
-                    properties -> new BasilCropBlock(
-                            properties
+                    () -> new BasilCropBlock(
+                            BlockBehaviour.Properties.of()
                                     .noCollission()
                                     .randomTicks()
                                     .instabreak()
@@ -34,11 +32,11 @@ public final class ModBlocks {
                     )
             );
 
-    public static final DeferredBlock<PepperCropBlock> PEPPER_CROP =
-            BLOCKS.registerBlock(
+    public static final RegistryObject<PepperCropBlock> PEPPER_CROP =
+            BLOCKS.register(
                     "bell_pepper_crop",
-                    properties -> new PepperCropBlock(
-                            properties
+                    () -> new PepperCropBlock(
+                            BlockBehaviour.Properties.of()
                                     .noCollission()
                                     .randomTicks()
                                     .instabreak()
@@ -47,12 +45,11 @@ public final class ModBlocks {
                     )
             );
 
-    // Wild crops - these receive normal BlockItems.
-    public static final DeferredBlock<WildCropBlock> WILD_BASIL =
-            registerBlock(
+    public static final RegistryObject<WildCropBlock> WILD_BASIL =
+            BLOCKS.register(
                     "wild_basil",
-                    properties -> new WildCropBlock(
-                            properties
+                    () -> new WildCropBlock(
+                            BlockBehaviour.Properties.of()
                                     .noCollission()
                                     .instabreak()
                                     .sound(SoundType.GRASS)
@@ -60,11 +57,11 @@ public final class ModBlocks {
                     )
             );
 
-    public static final DeferredBlock<WildCropBlock> WILD_BELL_PEPPERS =
-            registerBlock(
+    public static final RegistryObject<WildCropBlock> WILD_BELL_PEPPERS =
+            BLOCKS.register(
                     "wild_bell_peppers",
-                    properties -> new WildCropBlock(
-                            properties
+                    () -> new WildCropBlock(
+                            BlockBehaviour.Properties.of()
                                     .noCollission()
                                     .instabreak()
                                     .sound(SoundType.GRASS)
@@ -72,45 +69,25 @@ public final class ModBlocks {
                     )
             );
 
-    // Crates.
-    public static final DeferredBlock<Block> PEPPER_CRATE =
-            registerBlock(
+    public static final RegistryObject<Block> PEPPER_CRATE =
+            BLOCKS.register(
                     "pepper_crate",
-                    properties -> new Block(
-                            properties
+                    () -> new Block(
+                            BlockBehaviour.Properties.of()
                                     .sound(SoundType.WOOD)
                                     .strength(2.0F, 3.0F)
                     )
             );
 
-    public static final DeferredBlock<Block> BASIL_CRATE =
-            registerBlock(
+    public static final RegistryObject<Block> BASIL_CRATE =
+            BLOCKS.register(
                     "basil_crate",
-                    properties -> new Block(
-                            properties
+                    () -> new Block(
+                            BlockBehaviour.Properties.of()
                                     .sound(SoundType.WOOD)
                                     .strength(2.0F, 3.0F)
                     )
             );
-
-    private static <T extends Block> DeferredBlock<T> registerBlock(
-            String name,
-            Function<BlockBehaviour.Properties, T> blockFactory
-    ) {
-        DeferredBlock<T> block = BLOCKS.registerBlock(name, blockFactory);
-        registerBlockItem(name, block);
-        return block;
-    }
-
-    private static <T extends Block> void registerBlockItem(
-            String name,
-            DeferredBlock<T> block
-    ) {
-        ModItems.ITEMS.register(
-                name,
-                () -> new BlockItem(block.get(), new Item.Properties())
-        );
-    }
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

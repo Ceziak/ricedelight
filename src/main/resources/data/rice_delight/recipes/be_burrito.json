@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "ingredients": [
+    {
+      "item": "farmersdelight:cooked_bacon"
+    },
+    {
+      "item": "rice_delight:omelette"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "item": "rice_delight:cooked_wrap"
+    }
+  ],
+  "result": {
+    "item": "rice_delight:be_burrito"
+  }
+}

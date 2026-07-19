@@ -2,314 +2,273 @@ package net.ceziak.ricedelight.item;
 
 import net.ceziak.ricedelight.RiceDelight;
 import net.ceziak.ricedelight.block.ModBlocks;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraft.world.item.Items;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public final class ModItems {
-    public static final DeferredRegister.Items ITEMS =
-            DeferredRegister.createItems(RiceDelight.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS =
+            DeferredRegister.create(
+                    ForgeRegistries.ITEMS,
+                    RiceDelight.MOD_ID
+            );
 
-    // Crops and basic ingredients
+    // Block items
+    public static final RegistryObject<Item> WILD_BASIL_ITEM =
+            ITEMS.register("wild_basil",
+                    () -> new BlockItem(
+                            ModBlocks.WILD_BASIL.get(),
+                            new Item.Properties()
+                    ));
 
-    public static final DeferredItem<Item> PEPPER =
-            ITEMS.register("bell_pepper",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.PEPPER)));
+    public static final RegistryObject<Item> WILD_BELL_PEPPERS_ITEM =
+            ITEMS.register("wild_bell_peppers",
+                    () -> new BlockItem(
+                            ModBlocks.WILD_BELL_PEPPERS.get(),
+                            new Item.Properties()
+                    ));
 
-    public static final DeferredItem<Item> PEPPER_CHUNK =
-            ITEMS.register("pepper_chunk",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.PEPPER_CHUNK)));
+    public static final RegistryObject<Item> PEPPER_CRATE_ITEM =
+            ITEMS.register("pepper_crate",
+                    () -> new BlockItem(
+                            ModBlocks.PEPPER_CRATE.get(),
+                            new Item.Properties()
+                    ));
 
-    public static final DeferredItem<Item> BASIL =
-            ITEMS.register("basil",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.BASIL)));
+    public static final RegistryObject<Item> BASIL_CRATE_ITEM =
+            ITEMS.register("basil_crate",
+                    () -> new BlockItem(
+                            ModBlocks.BASIL_CRATE.get(),
+                            new Item.Properties()
+                    ));
 
-    public static final DeferredItem<Item> CINNAMON =
-            ITEMS.register("cinnamon",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.COUGHING)));
+    // Crops and ingredients
+    public static final RegistryObject<Item> PEPPER =
+            food("bell_pepper", ModFoodProperties.PEPPER);
+    public static final RegistryObject<Item> PEPPER_CHUNK =
+            food("pepper_chunk", ModFoodProperties.PEPPER_CHUNK);
+    public static final RegistryObject<Item> BASIL =
+            food("basil", ModFoodProperties.BASIL);
+    public static final RegistryObject<Item> CINNAMON =
+            food("cinnamon", ModFoodProperties.COUGHING);
+    public static final RegistryObject<Item> SCALLION =
+            food("scallion", ModFoodProperties.SCALLION);
+    public static final RegistryObject<Item> CHOPPED_SCALLIONS =
+            food("chopped_scallions",
+                    ModFoodProperties.CHOPPED_SCALLIONS);
+    public static final RegistryObject<Item> ONION_HEAD =
+            food("onion_head", ModFoodProperties.ONION_HEAD);
+    public static final RegistryObject<Item> RICE_DOUGH =
+            simple("rice_dough");
+    public static final RegistryObject<Item> RICE_WAFER =
+            food("rice_wafer", ModFoodProperties.RICE_WAFER);
+    public static final RegistryObject<Item> WRAP =
+            food("raw_wrap", ModFoodProperties.WRAP);
+    public static final RegistryObject<Item> COOKED_WRAP =
+            food("cooked_wrap", ModFoodProperties.COOKED_WRAP);
 
-    public static final DeferredItem<Item> SCALLION =
-            ITEMS.register("scallion",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.SCALLION)));
-
-    public static final DeferredItem<Item> CHOPPED_SCALLIONS =
-            ITEMS.register("chopped_scallions",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.CHOPPED_SCALLIONS)));
-
-    public static final DeferredItem<Item> ONION_HEAD =
-            ITEMS.register("onion_head",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.ONION_HEAD)));
-
-    public static final DeferredItem<Item> RICE_DOUGH =
-            ITEMS.register("rice_dough",
-                    () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<Item> RICE_WAFER =
-            ITEMS.register("rice_wafer",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.RICE_WAFER)));
-
-    public static final DeferredItem<Item> WRAP =
-            ITEMS.register("raw_wrap",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.WRAP)));
-
-    public static final DeferredItem<Item> COOKED_WRAP =
-            ITEMS.register("cooked_wrap",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.COOKED_WRAP)));
-
-    // Plantable seeds
-
-    public static final DeferredItem<ItemNameBlockItem> BASIL_SEEDS =
+    public static final RegistryObject<Item> BASIL_SEEDS =
             ITEMS.register("basil_seeds",
                     () -> new ItemNameBlockItem(
                             ModBlocks.BASIL_CROP.get(),
                             new Item.Properties()
                     ));
 
-    public static final DeferredItem<ItemNameBlockItem> PEPPER_SEEDS =
+    public static final RegistryObject<Item> PEPPER_SEEDS =
             ITEMS.register("bell_pepper_seeds",
                     () -> new ItemNameBlockItem(
                             ModBlocks.PEPPER_CROP.get(),
                             new Item.Properties()
                     ));
 
-    // Whole burritos
+    // Whole burritos with translated lore
+    public static final RegistryObject<Item> BT_BURRITO =
+            burrito("bt_burrito", ModFoodProperties.BT_BURRITO);
+    public static final RegistryObject<Item> CBC_BURRITO =
+            burrito("cbc_burrito", ModFoodProperties.CBC_BURRITO);
+    public static final RegistryObject<Item> FV_BURRITO =
+            burrito("fv_burrito", ModFoodProperties.FV_BURRITO);
+    public static final RegistryObject<Item> BE_BURRITO =
+            burrito("be_burrito", ModFoodProperties.BE_BURRITO);
+    public static final RegistryObject<Item> V_BURRITO =
+            burrito("v_burrito", ModFoodProperties.V_BURRITO);
+    public static final RegistryObject<Item> BC_BURRITO =
+            burrito("bc_burrito", ModFoodProperties.BC_BURRITO);
 
-    public static final DeferredItem<Item> BT_BURRITO =
-            ITEMS.register("bt_burrito",
-                    () -> new Item(ModItemLore.add(
-                            new Item.Properties()
-                                    .food(ModFoodProperties.BT_BURRITO)
-                                    .stacksTo(16),
-                            "lore.rice_delight.bt_burrito.0",
-                            "lore.rice_delight.bt_burrito.1",
-                            "lore.rice_delight.bt_burrito.2",
-                            "lore.rice_delight.bt_burrito.3"
-                    )));
+    // Burrito slices
+    public static final RegistryObject<Item> SLICED_BT_BURRITO =
+            food("sliced_bt_burrito",
+                    ModFoodProperties.SLICED_BT_BURRITO);
+    public static final RegistryObject<Item> SLICED_CBC_BURRITO =
+            food("sliced_cbc_burrito",
+                    ModFoodProperties.SLICED_CBC_BURRITO);
+    public static final RegistryObject<Item> SLICED_FV_BURRITO =
+            food("sliced_fv_burrito",
+                    ModFoodProperties.SLICED_FV_BURRITO);
+    public static final RegistryObject<Item> SLICED_BE_BURRITO =
+            food("sliced_be_burrito",
+                    ModFoodProperties.SLICED_BE_BURRITO);
+    public static final RegistryObject<Item> SLICED_V_BURRITO =
+            food("sliced_v_burrito",
+                    ModFoodProperties.SLICED_V_BURRITO);
+    public static final RegistryObject<Item> SLICED_BC_BURRITO =
+            food("sliced_bc_burrito",
+                    ModFoodProperties.SLICED_BC_BURRITO);
 
-    public static final DeferredItem<Item> CBC_BURRITO =
-            ITEMS.register("cbc_burrito",
-                    () -> new Item(ModItemLore.add(
-                            new Item.Properties()
-                                    .food(ModFoodProperties.CBC_BURRITO)
-                                    .stacksTo(16),
-                            "lore.rice_delight.cbc_burrito.0",
-                            "lore.rice_delight.cbc_burrito.1",
-                            "lore.rice_delight.cbc_burrito.2",
-                            "lore.rice_delight.cbc_burrito.3"
-                    )));
+    // Burnt food
+    public static final RegistryObject<Item> BURNT_WRAP =
+            food("burnt_wrap", ModFoodProperties.COUGHING);
+    public static final RegistryObject<Item> BURNT_BURRITO =
+            food("burnt_burrito", ModFoodProperties.COUGHING);
+    public static final RegistryObject<Item> SLICED_BURNT_BURRITO =
+            food("sliced_burnt_burrito",
+                    ModFoodProperties.COUGHING);
 
-    public static final DeferredItem<Item> FV_BURRITO =
-            ITEMS.register("fv_burrito",
-                    () -> new Item(ModItemLore.add(
-                            new Item.Properties()
-                                    .food(ModFoodProperties.FV_BURRITO)
-                                    .stacksTo(16),
-                            "lore.rice_delight.fv_burrito.0",
-                            "lore.rice_delight.fv_burrito.1",
-                            "lore.rice_delight.fv_burrito.2",
-                            "lore.rice_delight.fv_burrito.3"
-                    )));
+    // Rice meals
+    public static final RegistryObject<Item> OMELETTE =
+            food("omelette", ModFoodProperties.OMELETTE);
+    public static final RegistryObject<Item> OMELETTE_ROLL =
+            food("omelette_roll", ModFoodProperties.OMELETTE_ROLL);
+    public static final RegistryObject<Item> OMURICE =
+            stack16Food("omurice", ModFoodProperties.OMURICE);
+    public static final RegistryObject<Item> ONIGIRI =
+            food("onigiri", ModFoodProperties.ONIGIRI);
+    public static final RegistryObject<Item> RICE_BALLS =
+            food("rice_balls", ModFoodProperties.RICE_BALLS);
+    public static final RegistryObject<Item> RICE_FILLED_BELL_PEPPER =
+            stack16Food(
+                    "rice_filled_bell_pepper",
+                    ModFoodProperties.RICE_FILLED_BELL_PEPPER
+            );
 
-    public static final DeferredItem<Item> BE_BURRITO =
-            ITEMS.register("be_burrito",
-                    () -> new Item(ModItemLore.add(
-                            new Item.Properties()
-                                    .food(ModFoodProperties.BE_BURRITO)
-                                    .stacksTo(16),
-                            "lore.rice_delight.be_burrito.0",
-                            "lore.rice_delight.be_burrito.1",
-                            "lore.rice_delight.be_burrito.2",
-                            "lore.rice_delight.be_burrito.3"
-                    )));
-
-    public static final DeferredItem<Item> V_BURRITO =
-            ITEMS.register("v_burrito",
-                    () -> new Item(ModItemLore.add(
-                            new Item.Properties()
-                                    .food(ModFoodProperties.V_BURRITO)
-                                    .stacksTo(16),
-                            "lore.rice_delight.v_burrito.0",
-                            "lore.rice_delight.v_burrito.1",
-                            "lore.rice_delight.v_burrito.2",
-                            "lore.rice_delight.v_burrito.3"
-                    )));
-
-    public static final DeferredItem<Item> BC_BURRITO =
-            ITEMS.register("bc_burrito",
-                    () -> new Item(ModItemLore.add(
-                            new Item.Properties()
-                                    .food(ModFoodProperties.BC_BURRITO)
-                                    .stacksTo(16),
-                            "lore.rice_delight.bc_burrito.0",
-                            "lore.rice_delight.bc_burrito.1",
-                            "lore.rice_delight.bc_burrito.2",
-                            "lore.rice_delight.bc_burrito.3"
-                    )));
-
-    // Sliced burritos
-
-    public static final DeferredItem<Item> SLICED_BT_BURRITO =
-            ITEMS.register("sliced_bt_burrito",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.SLICED_BT_BURRITO)));
-
-    public static final DeferredItem<Item> SLICED_CBC_BURRITO =
-            ITEMS.register("sliced_cbc_burrito",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.SLICED_CBC_BURRITO)));
-
-    public static final DeferredItem<Item> SLICED_FV_BURRITO =
-            ITEMS.register("sliced_fv_burrito",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.SLICED_FV_BURRITO)));
-
-    public static final DeferredItem<Item> SLICED_BE_BURRITO =
-            ITEMS.register("sliced_be_burrito",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.SLICED_BE_BURRITO)));
-
-    public static final DeferredItem<Item> SLICED_V_BURRITO =
-            ITEMS.register("sliced_v_burrito",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.SLICED_V_BURRITO)));
-
-    public static final DeferredItem<Item> SLICED_BC_BURRITO =
-            ITEMS.register("sliced_bc_burrito",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.SLICED_BC_BURRITO)));
-
-    // Burnt foods
-
-    public static final DeferredItem<Item> BURNT_WRAP =
-            ITEMS.register("burnt_wrap",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.COUGHING)));
-
-    public static final DeferredItem<Item> BURNT_BURRITO =
-            ITEMS.register("burnt_burrito",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.COUGHING)));
-
-    public static final DeferredItem<Item> SLICED_BURNT_BURRITO =
-            ITEMS.register("sliced_burnt_burrito",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.COUGHING)));
-
-    // Rice dishes and meals
-
-    public static final DeferredItem<Item> OMELETTE =
-            ITEMS.register("omelette",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.OMELETTE)));
-
-    public static final DeferredItem<Item> OMELETTE_ROLL =
-            ITEMS.register("omelette_roll",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.OMELETTE_ROLL)));
-
-    public static final DeferredItem<Item> OMURICE =
-            ITEMS.register("omurice",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.OMURICE)
-                            .stacksTo(16)));
-
-    public static final DeferredItem<Item> ONIGIRI =
-            ITEMS.register("onigiri",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.ONIGIRI)));
-
-    public static final DeferredItem<Item> RICE_BALLS =
-            ITEMS.register("rice_balls",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.RICE_BALLS)));
-
-    public static final DeferredItem<Item> RICE_FILLED_BELL_PEPPER =
-            ITEMS.register("rice_filled_bell_pepper",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.RICE_FILLED_BELL_PEPPER)
-                            .stacksTo(16)));
-
-    public static final DeferredItem<Item> BOWL_OF_JOLLOF_RICE =
-            ITEMS.register("bowl_of_jollof_rice",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.BOWL_OF_JOLLOF_RICE)
-                            .stacksTo(16)));
-
-    public static final DeferredItem<Item> BOWL_OF_RISOTTO =
-            ITEMS.register("bowl_of_risotto",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.BOWL_OF_RISOTTO)
-                            .stacksTo(16)));
-
-    public static final DeferredItem<Item> CINNAMON_APPLE_RICE_BOWL =
-            ITEMS.register("cinnamon_apple_rice_bowl",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.CINNAMON_APPLE_RICE_BOWL)
-                            .stacksTo(16)));
+    public static final RegistryObject<Item> BOWL_OF_JOLLOF_RICE =
+            bowlFood(
+                    "bowl_of_jollof_rice",
+                    ModFoodProperties.BOWL_OF_JOLLOF_RICE
+            );
+    public static final RegistryObject<Item> BOWL_OF_RISOTTO =
+            bowlFood(
+                    "bowl_of_risotto",
+                    ModFoodProperties.BOWL_OF_RISOTTO
+            );
+    public static final RegistryObject<Item> CINNAMON_APPLE_RICE_BOWL =
+            bowlFood(
+                    "cinnamon_apple_rice_bowl",
+                    ModFoodProperties.CINNAMON_APPLE_RICE_BOWL
+            );
 
     // Mochi bowls
+    public static final RegistryObject<Item> BOWL_OF_APPLE_MOCHI =
+            bowlFood(
+                    "bowl_of_apple_mochi",
+                    ModFoodProperties.BOWL_OF_APPLE_MOCHI
+            );
+    public static final RegistryObject<Item> BOWL_OF_CHOCOLATE_MOCHI =
+            bowlFood(
+                    "bowl_of_chocolate_mochi",
+                    ModFoodProperties.BOWL_OF_CHOCOLATE_MOCHI
+            );
+    public static final RegistryObject<Item> BOWL_OF_GLOW_BERRY_MOCHI =
+            bowlFood(
+                    "bowl_of_glow_berry_mochi",
+                    ModFoodProperties.BOWL_OF_GLOW_BERRY_MOCHI
+            );
+    public static final RegistryObject<Item> BOWL_OF_MELON_MOCHI =
+            bowlFood(
+                    "bowl_of_melon_mochi",
+                    ModFoodProperties.BOWL_OF_MELON_MOCHI
+            );
+    public static final RegistryObject<Item> BOWL_OF_SWEET_BERRY_MOCHI =
+            bowlFood(
+                    "bowl_of_sweet_berry_mochi",
+                    ModFoodProperties.BOWL_OF_SWEET_BERRY_MOCHI
+            );
 
-    public static final DeferredItem<Item> BOWL_OF_APPLE_MOCHI =
-            ITEMS.register("bowl_of_apple_mochi",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.BOWL_OF_APPLE_MOCHI)
-                            .stacksTo(16)));
-
-    public static final DeferredItem<Item> BOWL_OF_CHOCOLATE_MOCHI =
-            ITEMS.register("bowl_of_chocolate_mochi",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.BOWL_OF_CHOCOLATE_MOCHI)
-                            .stacksTo(16)));
-
-    public static final DeferredItem<Item> BOWL_OF_GLOW_BERRY_MOCHI =
-            ITEMS.register("bowl_of_glow_berry_mochi",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.BOWL_OF_GLOW_BERRY_MOCHI)
-                            .stacksTo(16)));
-
-    public static final DeferredItem<Item> BOWL_OF_MELON_MOCHI =
-            ITEMS.register("bowl_of_melon_mochi",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.BOWL_OF_MELON_MOCHI)
-                            .stacksTo(16)));
-
-    public static final DeferredItem<Item> BOWL_OF_SWEET_BERRY_MOCHI =
-            ITEMS.register("bowl_of_sweet_berry_mochi",
-                    () -> new Item(new Item.Properties()
-                            .food(ModFoodProperties.BOWL_OF_SWEET_BERRY_MOCHI)
-                            .stacksTo(16)));
-
-    // Drinks
-
-    public static final DeferredItem<DrinkItem> HORCHATA =
+    public static final RegistryObject<Item> HORCHATA =
             ITEMS.register("horchata",
                     () -> new DrinkItem(
                             new Item.Properties()
                                     .food(ModFoodProperties.HORCHATA)
-                                    .stacksTo(16)
+                                    .stacksTo(16),
+                            Items.GLASS_BOTTLE
                     ));
 
     // Tools
+    public static final RegistryObject<Item> PIN =
+            simple("pin");
+    public static final RegistryObject<Item> WOODEN_HAMMER =
+            simple("wooden_hammer");
 
-    public static final DeferredItem<Item> PIN =
-            ITEMS.register("pin",
-                    () -> new Item(new Item.Properties()));
+    private static RegistryObject<Item> simple(String name) {
+        return ITEMS.register(
+                name,
+                () -> new Item(new Item.Properties())
+        );
+    }
 
-    public static final DeferredItem<Item> WOODEN_HAMMER =
-            ITEMS.register("wooden_hammer",
-                    () -> new Item(new Item.Properties()));
+    private static RegistryObject<Item> food(
+            String name,
+            net.minecraft.world.food.FoodProperties food
+    ) {
+        return ITEMS.register(
+                name,
+                () -> new Item(
+                        new Item.Properties().food(food)
+                )
+        );
+    }
+
+    private static RegistryObject<Item> stack16Food(
+            String name,
+            net.minecraft.world.food.FoodProperties food
+    ) {
+        return ITEMS.register(
+                name,
+                () -> new Item(
+                        new Item.Properties()
+                                .food(food)
+                                .stacksTo(16)
+                )
+        );
+    }
+
+    private static RegistryObject<Item> bowlFood(
+            String name,
+            net.minecraft.world.food.FoodProperties food
+    ) {
+        return ITEMS.register(
+                name,
+                () -> new ContainerFoodItem(
+                        new Item.Properties()
+                                .food(food)
+                                .stacksTo(16),
+                        Items.BOWL
+                )
+        );
+    }
+
+    private static RegistryObject<Item> burrito(
+            String name,
+            net.minecraft.world.food.FoodProperties food
+    ) {
+        return ITEMS.register(
+                name,
+                () -> new LoreItem(
+                        new Item.Properties()
+                                .food(food)
+                                .stacksTo(16),
+                        "lore.rice_delight." + name + ".0",
+                        "lore.rice_delight." + name + ".1",
+                        "lore.rice_delight." + name + ".2",
+                        "lore.rice_delight." + name + ".3"
+                )
+        );
+    }
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

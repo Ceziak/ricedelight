@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 500,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "forge:crops/rice"
+    },
+    {
+      "item": "farmersdelight:chicken_cuts"
+    },
+    {
+      "item": "farmersdelight:tomato"
+    },
+    {
+      "item": "rice_delight:chopped_scallions"
+    },
+    {
+      "item": "rice_delight:bell_pepper"
+    },
+    {
+      "item": "rice_delight:basil"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "rice_delight:bowl_of_jollof_rice"
+  },
+  "container": {
+    "item": "minecraft:bowl"
+  }
+}

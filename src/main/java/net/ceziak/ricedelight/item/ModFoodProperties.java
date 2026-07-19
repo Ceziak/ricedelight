@@ -3,259 +3,121 @@ package net.ceziak.ricedelight.item;
 import net.ceziak.ricedelight.effect.ModEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Items;
 
 public final class ModFoodProperties {
-
-    // Crops and small ingredients
-
     public static final FoodProperties PEPPER =
-            new FoodProperties.Builder()
-                    .nutrition(3)
-                    .saturationModifier(0.25F)
-                    .build();
-
+            food(3, 0.25F);
     public static final FoodProperties PEPPER_CHUNK =
-            new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationModifier(0.5F)
-                    .fast()
-                    .build();
-
+            fastFood(1, 0.5F);
     public static final FoodProperties BASIL =
-            new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationModifier(0.5F)
-                    .fast()
-                    .build();
-
+            fastFood(1, 0.5F);
     public static final FoodProperties SCALLION =
-            new FoodProperties.Builder()
-                    .nutrition(2)
-                    .saturationModifier(0.3F)
-                    .build();
-
+            food(2, 0.3F);
     public static final FoodProperties CHOPPED_SCALLIONS =
-            new FoodProperties.Builder()
-                    .nutrition(1)
-                    .saturationModifier(0.2F)
-                    .fast()
-                    .build();
-
+            fastFood(1, 0.2F);
     public static final FoodProperties ONION_HEAD =
-            new FoodProperties.Builder()
-                    .nutrition(2)
-                    .saturationModifier(0.3F)
-                    .build();
-
+            food(2, 0.3F);
     public static final FoodProperties RICE_WAFER =
-            new FoodProperties.Builder()
-                    .nutrition(2)
-                    .saturationModifier(0.3F)
-                    .fast()
-                    .build();
-
+            fastFood(2, 0.3F);
     public static final FoodProperties WRAP =
-            new FoodProperties.Builder()
-                    .nutrition(3)
-                    .saturationModifier(0.25F)
-                    .build();
-
+            food(3, 0.25F);
     public static final FoodProperties COOKED_WRAP =
-            new FoodProperties.Builder()
-                    .nutrition(5)
-                    .saturationModifier(0.4F)
-                    .build();
-
-    // Burnt foods and cinnamon
+            food(5, 0.4F);
 
     public static final FoodProperties COUGHING =
             new FoodProperties.Builder()
                     .nutrition(1)
-                    .saturationModifier(0.5F)
+                    .saturationMod(0.5F)
                     .fast()
                     .effect(
                             () -> new MobEffectInstance(
-                                    ModEffects.COUGHING,
+                                    ModEffects.COUGHING.get(),
                                     20 * 5,
                                     0
                             ),
                             1.0F
                     )
-                    .alwaysEdible()
+                    .alwaysEat()
                     .build();
-
-    // Whole burritos
-    // Each whole burrito is worth the same as the two slices it produces.
 
     public static final FoodProperties BT_BURRITO =
-            new FoodProperties.Builder()
-                    .nutrition(16)
-                    .saturationModifier(0.25F)
-                    .build();
-
+            food(16, 0.25F);
     public static final FoodProperties CBC_BURRITO =
-            new FoodProperties.Builder()
-                    .nutrition(12)
-                    .saturationModifier(0.25F)
-                    .build();
-
+            food(12, 0.25F);
     public static final FoodProperties FV_BURRITO =
-            new FoodProperties.Builder()
-                    .nutrition(14)
-                    .saturationModifier(0.25F)
-                    .build();
-
+            food(14, 0.25F);
     public static final FoodProperties BE_BURRITO =
-            new FoodProperties.Builder()
-                    .nutrition(20)
-                    .saturationModifier(0.25F)
-                    .build();
-
+            food(20, 0.25F);
     public static final FoodProperties V_BURRITO =
-            new FoodProperties.Builder()
-                    .nutrition(14)
-                    .saturationModifier(0.25F)
-                    .build();
-
+            food(14, 0.25F);
     public static final FoodProperties BC_BURRITO =
-            new FoodProperties.Builder()
-                    .nutrition(16)
-                    .saturationModifier(0.25F)
-                    .build();
-
-    // Burrito slices
+            food(16, 0.25F);
 
     public static final FoodProperties SLICED_BT_BURRITO =
-            new FoodProperties.Builder()
-                    .nutrition(8)
-                    .saturationModifier(0.25F)
-                    .build();
-
+            food(8, 0.25F);
     public static final FoodProperties SLICED_CBC_BURRITO =
-            new FoodProperties.Builder()
-                    .nutrition(6)
-                    .saturationModifier(0.25F)
-                    .build();
-
+            food(6, 0.25F);
     public static final FoodProperties SLICED_FV_BURRITO =
-            new FoodProperties.Builder()
-                    .nutrition(7)
-                    .saturationModifier(0.25F)
-                    .build();
-
+            food(7, 0.25F);
     public static final FoodProperties SLICED_BE_BURRITO =
-            new FoodProperties.Builder()
-                    .nutrition(10)
-                    .saturationModifier(0.25F)
-                    .build();
-
+            food(10, 0.25F);
     public static final FoodProperties SLICED_V_BURRITO =
-            new FoodProperties.Builder()
-                    .nutrition(7)
-                    .saturationModifier(0.25F)
-                    .build();
-
+            food(7, 0.25F);
     public static final FoodProperties SLICED_BC_BURRITO =
-            new FoodProperties.Builder()
-                    .nutrition(8)
-                    .saturationModifier(0.25F)
-                    .build();
-
-    // Rice meals
+            food(8, 0.25F);
 
     public static final FoodProperties OMELETTE =
-            new FoodProperties.Builder()
-                    .nutrition(5)
-                    .saturationModifier(0.4F)
-                    .build();
-
+            food(5, 0.4F);
     public static final FoodProperties OMELETTE_ROLL =
-            new FoodProperties.Builder()
-                    .nutrition(6)
-                    .saturationModifier(0.5F)
-                    .build();
-
+            food(6, 0.5F);
     public static final FoodProperties OMURICE =
-            new FoodProperties.Builder()
-                    .nutrition(12)
-                    .saturationModifier(0.6F)
-                    .build();
-
+            food(12, 0.6F);
     public static final FoodProperties ONIGIRI =
-            new FoodProperties.Builder()
-                    .nutrition(5)
-                    .saturationModifier(0.5F)
-                    .build();
-
+            food(5, 0.5F);
     public static final FoodProperties RICE_BALLS =
-            new FoodProperties.Builder()
-                    .nutrition(6)
-                    .saturationModifier(0.5F)
-                    .build();
-
+            food(6, 0.5F);
     public static final FoodProperties RICE_FILLED_BELL_PEPPER =
-            new FoodProperties.Builder()
-                    .nutrition(8)
-                    .saturationModifier(0.6F)
-                    .build();
-
+            food(8, 0.6F);
     public static final FoodProperties BOWL_OF_JOLLOF_RICE =
-            new FoodProperties.Builder()
-                    .nutrition(14)
-                    .saturationModifier(0.75F)
-                    .usingConvertsTo(Items.BOWL)
-                    .build();
-
+            food(14, 0.75F);
     public static final FoodProperties BOWL_OF_RISOTTO =
-            new FoodProperties.Builder()
-                    .nutrition(12)
-                    .saturationModifier(0.7F)
-                    .usingConvertsTo(Items.BOWL)
-                    .build();
-
+            food(12, 0.7F);
     public static final FoodProperties CINNAMON_APPLE_RICE_BOWL =
-            new FoodProperties.Builder()
-                    .nutrition(10)
-                    .saturationModifier(0.6F)
-                    .usingConvertsTo(Items.BOWL)
-                    .build();
-
-    // Mochi bowls
+            food(10, 0.6F);
 
     public static final FoodProperties BOWL_OF_APPLE_MOCHI =
-            mochiBowl(8, 0.55F);
-
+            food(8, 0.55F);
     public static final FoodProperties BOWL_OF_CHOCOLATE_MOCHI =
-            mochiBowl(9, 0.6F);
-
+            food(9, 0.6F);
     public static final FoodProperties BOWL_OF_GLOW_BERRY_MOCHI =
-            mochiBowl(8, 0.55F);
-
+            food(8, 0.55F);
     public static final FoodProperties BOWL_OF_MELON_MOCHI =
-            mochiBowl(7, 0.5F);
-
+            food(7, 0.5F);
     public static final FoodProperties BOWL_OF_SWEET_BERRY_MOCHI =
-            mochiBowl(8, 0.55F);
-
-    // Drinks
+            food(8, 0.55F);
 
     public static final FoodProperties HORCHATA =
             new FoodProperties.Builder()
                     .nutrition(5)
-                    .saturationModifier(0.5F)
-                    .alwaysEdible()
-                    .usingConvertsTo(Items.GLASS_BOTTLE)
+                    .saturationMod(0.5F)
+                    .alwaysEat()
                     .build();
 
-    private static FoodProperties mochiBowl(
+    private static FoodProperties food(int nutrition, float saturation) {
+        return new FoodProperties.Builder()
+                .nutrition(nutrition)
+                .saturationMod(saturation)
+                .build();
+    }
+
+    private static FoodProperties fastFood(
             int nutrition,
             float saturation
     ) {
         return new FoodProperties.Builder()
                 .nutrition(nutrition)
-                .saturationModifier(saturation)
-                .usingConvertsTo(Items.BOWL)
+                .saturationMod(saturation)
+                .fast()
                 .build();
     }
 

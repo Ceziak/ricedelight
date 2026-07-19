@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "rice_delight:bt_burrito"
+    }
+  ],
+  "result": [
+    {
+      "item": "rice_delight:sliced_bt_burrito",
+      "count": 2
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

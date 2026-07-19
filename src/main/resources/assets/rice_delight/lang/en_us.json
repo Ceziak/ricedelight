@@ -1,99 +1,16 @@
 {
-  "creativetab.rice_delight.rice_delight": "Rice Delight",
-
   "item.rice_delight.bell_pepper": "Bell Pepper",
   "item.rice_delight.bell_pepper_seeds": "Bell Pepper Seeds",
   "item.rice_delight.pepper_chunk": "Bell Pepper Chunk",
-
   "item.rice_delight.basil": "Basil Leaf",
   "item.rice_delight.basil_seeds": "Basil Seeds",
-
-  "item.rice_delight.cinnamon": "Cinnamon",
-  "item.rice_delight.raw_wrap": "Tortilla Wrap",
-  "item.rice_delight.cooked_wrap": "Cooked Tortilla Wrap",
-
-  "item.rice_delight.bt_burrito": "Burrito",
-  "item.rice_delight.cbc_burrito": "Burrito",
-  "item.rice_delight.fv_burrito": "Burrito",
-  "item.rice_delight.be_burrito": "Burrito",
-  "item.rice_delight.v_burrito": "Burrito",
-  "item.rice_delight.bc_burrito": "Burrito",
-
-  "item.rice_delight.sliced_bt_burrito": "Burrito Half",
-  "item.rice_delight.sliced_cbc_burrito": "Burrito Half",
-  "item.rice_delight.sliced_fv_burrito": "Burrito Half",
-  "item.rice_delight.sliced_be_burrito": "Burrito Half",
-  "item.rice_delight.sliced_v_burrito": "Burrito Half",
-  "item.rice_delight.sliced_bc_burrito": "Burrito Half",
-
-  "item.rice_delight.burnt_burrito": "Burnt Burrito",
-  "item.rice_delight.burnt_wrap": "Burnt Tortilla Wrap",
-
   "item.rice_delight.horchata": "Horchata",
   "item.rice_delight.pin": "Rolling Pin",
-
   "block.rice_delight.pepper_crate": "Bell Pepper Crate",
   "block.rice_delight.basil_crate": "Basil Crate",
   "block.rice_delight.bell_pepper_crop": "Bell Pepper Crop",
   "block.rice_delight.basil_crop": "Basil Crop",
-
-  "effect.rice_delight.coughing": "Coughing",
-  "death.attack.coughing": "%1$s coughed their soul out",
-
-  "lore.rice_delight.bt_burrito.0": "Contents:",
-  "lore.rice_delight.bt_burrito.1": "• Rice",
-  "lore.rice_delight.bt_burrito.2": "• Beef",
-  "lore.rice_delight.bt_burrito.3": "• Tomato",
-
-  "lore.rice_delight.cbc_burrito.0": "Contents:",
-  "lore.rice_delight.cbc_burrito.1": "• Rice",
-  "lore.rice_delight.cbc_burrito.2": "• Chicken",
-  "lore.rice_delight.cbc_burrito.3": "• Beetroot",
-  "lore.rice_delight.cbc_burrito.4": "• Cabbage",
-
-  "lore.rice_delight.fv_burrito.0": "Contents:",
-  "lore.rice_delight.fv_burrito.1": "• Fried Rice",
-  "lore.rice_delight.fv_burrito.2": "• Tomato",
-  "lore.rice_delight.fv_burrito.3": "• Cabbage",
-
-  "lore.rice_delight.be_burrito.0": "Contents:",
-  "lore.rice_delight.be_burrito.1": "• Rice",
-  "lore.rice_delight.be_burrito.2": "• Bacon",
-  "lore.rice_delight.be_burrito.3": "• Eggs",
-
-  "lore.rice_delight.v_burrito.0": "Contents:",
-  "lore.rice_delight.v_burrito.1": "• Rice",
-  "lore.rice_delight.v_burrito.2": "• Tomato",
-  "lore.rice_delight.v_burrito.3": "• Cabbage",
-
-  "lore.rice_delight.bc_burrito.0": "Contents:",
-  "lore.rice_delight.bc_burrito.1": "• Rice",
-  "lore.rice_delight.bc_burrito.2": "• Beef",
-  "lore.rice_delight.bc_burrito.3": "• Cabbage",
-
-  "item.rice_delight.bowl_of_apple_mochi": "Apple Mochi Bowl",
-  "item.rice_delight.bowl_of_chocolate_mochi": "Chocolate Mochi Bowl",
-  "item.rice_delight.bowl_of_glow_berry_mochi": "Glow Berry Mochi Bowl",
-  "item.rice_delight.bowl_of_jollof_rice": "Jollof Rice",
-  "item.rice_delight.bowl_of_melon_mochi": "Melon Mochi Bowl",
-  "item.rice_delight.bowl_of_risotto": "Risotto",
-  "item.rice_delight.bowl_of_sweet_berry_mochi": "Sweet Berry Mochi Bowl",
-  "item.rice_delight.chopped_scallions": "Chopped Scallions",
-  "item.rice_delight.cinnamon_apple_rice_bowl": "Cinnamon Apple Rice",
-  "item.rice_delight.omelette": "Omelette",
-  "item.rice_delight.omelette_roll": "Omelette Roll",
-  "item.rice_delight.omurice": "Omurice",
-  "item.rice_delight.onigiri": "Onigiri",
-  "item.rice_delight.onion_head": "Onion Bulb",
-  "item.rice_delight.rice_balls": "Rice Balls",
-  "item.rice_delight.rice_dough": "Rice Dough",
-  "item.rice_delight.rice_filled_bell_pepper": "Rice-Stuffed Bell Pepper",
-  "item.rice_delight.rice_wafer": "Rice Wafer",
-  "item.rice_delight.scallion": "Scallion",
-  "item.rice_delight.sliced_burnt_burrito": "Burnt Burrito Slice",
-  "item.rice_delight.wooden_hammer": "Wooden Hammer",
-
-  "block.rice_delight.wild_basil": "Wild Basil",
-  "block.rice_delight.wild_bell_peppers": "Wild Bell Peppers"
-
+  "creativetab.rice_delight.rice_delight": "Rice Delight",
+  "death.attack.coughing": "%1$s coughed his soul out",
+  "effect.rice_delight.coughing": "Coughing"
 }

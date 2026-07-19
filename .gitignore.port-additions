@@ -1,0 +1,4 @@
+# Add these lines to the branch .gitignore if they are not already present:
+libs/*.jar
+run/
+run-data/

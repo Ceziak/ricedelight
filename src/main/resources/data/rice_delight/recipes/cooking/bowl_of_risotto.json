@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 600,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "forge:crops/rice"
+    },
+    {
+      "item": "farmersdelight:chicken_cuts"
+    },
+    {
+      "item": "farmersdelight:cabbage_leaf"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "rice_delight:bowl_of_risotto"
+  },
+  "container": {
+    "item": "minecraft:bowl"
+  }
+}

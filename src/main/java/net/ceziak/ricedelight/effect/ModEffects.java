@@ -1,28 +1,27 @@
 package net.ceziak.ricedelight.effect;
 
 import net.ceziak.ricedelight.RiceDelight;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffect;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public final class ModEffects {
-
-    public static final DeferredRegister<MobEffect> MOB_EFFECTS =
+    public static final DeferredRegister<MobEffect> EFFECTS =
             DeferredRegister.create(
-                    Registries.MOB_EFFECT,
+                    ForgeRegistries.MOB_EFFECTS,
                     RiceDelight.MOD_ID
             );
 
-    public static final DeferredHolder<MobEffect, CoughingEffect> COUGHING =
-            MOB_EFFECTS.register(
+    public static final RegistryObject<MobEffect> COUGHING =
+            EFFECTS.register(
                     "coughing",
                     CoughingEffect::new
             );
 
     public static void register(IEventBus eventBus) {
-        MOB_EFFECTS.register(eventBus);
+        EFFECTS.register(eventBus);
     }
 
     private ModEffects() {
