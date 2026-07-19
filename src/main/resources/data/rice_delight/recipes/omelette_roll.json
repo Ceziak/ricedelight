@@ -3,16 +3,13 @@
   "category": "food",
   "ingredients": [
     {
-      "item": "rice_delight:omelette"
-    },
-    {
       "item": "farmersdelight:cooked_rice"
     },
     {
-      "item": "rice_delight:chopped_scallions"
+      "item": "rice_delight:omelette"
     }
   ],
   "result": {
-    "item": "rice_delight:omurice"
+    "item": "rice_delight:omelette_roll"
   }
 }

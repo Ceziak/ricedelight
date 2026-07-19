@@ -1,25 +1,27 @@
-# eclipse
-bin
+# Eclipse
+bin/
 *.launch
-.settings
-.metadata
+.settings/
+.metadata/
 .classpath
 .project
 
-# idea
-out
+# IntelliJ IDEA
+out/
 *.ipr
 *.iws
 *.iml
-.idea
+.idea/
 
-# gradle
-build
-.gradle
+# Gradle and generated output
+build/
+.gradle/
+src/generated/
 
-# other
-eclipse
-run
+# Run directories
+run/
+run-data/
+eclipse/
 
-# Files from Forge MDK
-forge*changelog.txt
+# Local dependency folder, if used manually
+libs/*.jar

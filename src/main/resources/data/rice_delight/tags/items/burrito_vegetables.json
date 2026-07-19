@@ -1,9 +1,14 @@
 {
   "replace": false,
   "values": [
-    "farmersdelight:tomato",
-    "farmersdelight:cabbage_leaf",
     "minecraft:beetroot",
-    "rice_delight:bell_pepper"
+    "minecraft:potato",
+    "minecraft:carrot",
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom",
+    "rice_delight:bell_pepper",
+    "farmersdelight:onion",
+    "farmersdelight:tomato",
+    "farmersdelight:cabbage_leaf"
   ]
 }

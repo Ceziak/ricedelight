@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "farmersdelight:fried_egg"
   },
-  "result": {
-    "item": "rice_delight:omelette"
-  }
+  "result": "rice_delight:omelette"
 }

@@ -6,7 +6,5 @@
   "ingredient": {
     "item": "rice_delight:rice_dough"
   },
-  "result": {
-    "item": "rice_delight:rice_wafer"
-  }
+  "result": "rice_delight:rice_wafer"
 }

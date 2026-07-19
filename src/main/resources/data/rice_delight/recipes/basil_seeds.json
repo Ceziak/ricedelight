@@ -3,11 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "rice_delight:bell_pepper"
+      "item": "rice_delight:basil"
     }
   ],
   "result": {
     "count": 2,
-    "item": "rice_delight:bell_pepper_seeds"
+    "item": "rice_delight:basil_seeds"
   }
 }

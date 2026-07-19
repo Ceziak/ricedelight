@@ -17,7 +17,7 @@ public class WildCropBlock extends BushBlock {
     }
 
     @Override
-    protected VoxelShape getShape(
+    public VoxelShape getShape(
             BlockState state,
             BlockGetter level,
             BlockPos pos,
@@ -26,3 +26,4 @@ public class WildCropBlock extends BushBlock {
         return SHAPE;
     }
 }
+

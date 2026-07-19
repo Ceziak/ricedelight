@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "cross": "rice_delight:block/wild_bell_pepper_plant"
+    "cross": "rice_delight:block/wild_bell_pepper_crop"
   }
 }

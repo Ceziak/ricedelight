@@ -1,0 +1,22 @@
+RICE DELIGHT FORGE 1.20.1 — AUDIT RESULT
+
+Fixed in this project:
+- removed remaining NeoForge template and enum-extension files
+- removed 1.21 singular recipe, loot-table and item-tag folders
+- converted all 46 current recipes to Forge/Minecraft 1.20.1 paths and syntax
+- restored missing crate, seed, pepper-cutting and omelette-roll recipes
+- fixed the rolling-pin tag and moved all item tags to tags/items
+- fixed the Wild Bell Pepper texture path
+- added every missing English item/block name and all burrito lore keys
+- changed Farmer's Delight from a missing local JAR to automatic CurseMaven dependency
+- changed GitHub Actions from Java 21 to Java 17
+- updated the wrapper to Gradle 8.8
+
+After installation run:
+.\gradlew.bat --stop
+.\gradlew.bat --refresh-dependencies
+.\gradlew.bat clean compileJava
+.\gradlew.bat runClient
+
+The custom NeoForge heart type remains disabled on Forge 1.20.1.
+The Coughing effect and custom damage source remain enabled.

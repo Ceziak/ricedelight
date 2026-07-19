@@ -52,7 +52,7 @@ public class BasilCropBlock extends CropBlock {
     }
 
     @Override
-    protected VoxelShape getShape(
+    public VoxelShape getShape(
             BlockState state,
             BlockGetter level,
             BlockPos pos,
@@ -61,3 +61,4 @@ public class BasilCropBlock extends CropBlock {
         return SHAPES[getAge(state)];
     }
 }
+

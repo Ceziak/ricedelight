@@ -2,14 +2,13 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "farmersdelight:tree_bark"
+      "item": "rice_delight:bell_pepper"
     }
   ],
   "result": [
     {
-      "item": "rice_delight:cinnamon",
-      "count": 3,
-      "chance": 0.5
+      "item": "rice_delight:pepper_chunk",
+      "count": 5
     }
   ],
   "tool": {
