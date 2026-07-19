@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 150,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "rice_delight:cooked_wrap"
+  },
+  "result": {
+    "id": "rice_delight:burnt_wrap"
+  }
+}

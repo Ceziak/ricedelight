@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "food",
+  "pattern": [
+    " A ",
+    "BCB",
+    " D "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:sugar"
+    },
+    "B": {
+      "item": "rice_delight:rice_dough"
+    },
+    "C": {
+      "item": "minecraft:melon_slice"
+    },
+    "D": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "id": "rice_delight:bowl_of_melon_mochi"
+  }
+}

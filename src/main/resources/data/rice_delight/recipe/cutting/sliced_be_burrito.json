@@ -1,0 +1,25 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "rice_delight:be_burrito"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "id": "rice_delight:sliced_be_burrito",
+        "count": 2
+      }
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:item_ability",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knife"
+    }
+  ]
+}

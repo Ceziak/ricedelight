@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "rice_delight:item/cooked_wrap"
+    "layer0": "rice_delight:item/bowl_of_sweet_berry_mochi"
   }
 }
