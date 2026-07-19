@@ -21,12 +21,12 @@ public final class ModCreativeModeTabs {
             CREATIVE_MODE_TABS.register(
                     "rice_delight",
                     () -> CreativeModeTab.builder()
-                            .icon(() -> new ItemStack(ModItems.PIN.get()))
+                            .icon(() -> new ItemStack(ModItems.PEPPER.get()))
                             .title(Component.translatable(
                                     "creativetab.rice_delight.rice_delight"
                             ))
                             .displayItems((parameters, output) -> {
-                                // Crops
+                                // Crops and harvested ingredients
                                 output.accept(ModItems.PEPPER_SEEDS.get());
                                 output.accept(ModItems.PEPPER.get());
                                 output.accept(ModItems.PEPPER_CHUNK.get());
@@ -36,36 +36,64 @@ public final class ModCreativeModeTabs {
                                 output.accept(ModItems.BASIL.get());
                                 output.accept(ModBlocks.BASIL_CRATE.get());
 
-                                // Ingredients
+                                output.accept(ModItems.SCALLION.get());
+                                output.accept(ModItems.CHOPPED_SCALLIONS.get());
+                                output.accept(ModItems.ONION_HEAD.get());
+
+                                // Prepared ingredients
                                 output.accept(ModItems.CINNAMON.get());
+                                output.accept(ModItems.RICE_DOUGH.get());
+                                output.accept(ModItems.RICE_WAFER.get());
                                 output.accept(ModItems.WRAP.get());
                                 output.accept(ModItems.COOKED_WRAP.get());
 
-                                // Whole burritos
+                                // Burritos, paired with their slices
                                 output.accept(ModItems.BT_BURRITO.get());
-                                output.accept(ModItems.CBC_BURRITO.get());
-                                output.accept(ModItems.FV_BURRITO.get());
-                                output.accept(ModItems.BE_BURRITO.get());
-                                output.accept(ModItems.V_BURRITO.get());
-                                output.accept(ModItems.BC_BURRITO.get());
-
-                                // Sliced burritos
                                 output.accept(ModItems.SLICED_BT_BURRITO.get());
+
+                                output.accept(ModItems.CBC_BURRITO.get());
                                 output.accept(ModItems.SLICED_CBC_BURRITO.get());
+
+                                output.accept(ModItems.FV_BURRITO.get());
                                 output.accept(ModItems.SLICED_FV_BURRITO.get());
+
+                                output.accept(ModItems.BE_BURRITO.get());
                                 output.accept(ModItems.SLICED_BE_BURRITO.get());
+
+                                output.accept(ModItems.V_BURRITO.get());
                                 output.accept(ModItems.SLICED_V_BURRITO.get());
+
+                                output.accept(ModItems.BC_BURRITO.get());
                                 output.accept(ModItems.SLICED_BC_BURRITO.get());
 
-                                // Burnt foods
                                 output.accept(ModItems.BURNT_WRAP.get());
                                 output.accept(ModItems.BURNT_BURRITO.get());
+                                output.accept(ModItems.SLICED_BURNT_BURRITO.get());
+
+                                // Rice meals
+                                output.accept(ModItems.OMELETTE.get());
+                                output.accept(ModItems.OMELETTE_ROLL.get());
+                                output.accept(ModItems.OMURICE.get());
+                                output.accept(ModItems.ONIGIRI.get());
+                                output.accept(ModItems.RICE_BALLS.get());
+                                output.accept(ModItems.RICE_FILLED_BELL_PEPPER.get());
+                                output.accept(ModItems.BOWL_OF_JOLLOF_RICE.get());
+                                output.accept(ModItems.BOWL_OF_RISOTTO.get());
+                                output.accept(ModItems.CINNAMON_APPLE_RICE_BOWL.get());
+
+                                // Mochi bowls
+                                output.accept(ModItems.BOWL_OF_APPLE_MOCHI.get());
+                                output.accept(ModItems.BOWL_OF_CHOCOLATE_MOCHI.get());
+                                output.accept(ModItems.BOWL_OF_GLOW_BERRY_MOCHI.get());
+                                output.accept(ModItems.BOWL_OF_MELON_MOCHI.get());
+                                output.accept(ModItems.BOWL_OF_SWEET_BERRY_MOCHI.get());
 
                                 // Drinks
                                 output.accept(ModItems.HORCHATA.get());
 
                                 // Tools
                                 output.accept(ModItems.PIN.get());
+                                output.accept(ModItems.WOODEN_HAMMER.get());
                             })
                             .build()
             );
